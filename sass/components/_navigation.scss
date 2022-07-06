@@ -1,0 +1,53 @@
+/* header navigation */
+
+.navigation {
+	display: flex;
+	align-items: center;
+}
+
+.navigation__buttons {
+	@extend %list;
+	gap: 50px;
+
+	display: flex;
+	padding-left: 0;
+	margin-left: 93px;
+}
+
+.navigation__link {
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	list-style: none;
+	color: $main-text-color;
+	text-decoration: none;
+	font-weight: $font-weight-employee-name;
+
+	position: relative;
+	transition: color 250ms $cubic-bezier;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+
+	&--current {
+		color: $accent-color;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			bottom: -1px;
+			width: 100%;
+			height: 4px;
+
+			background-color: #2196f3;
+			border-radius: 2px;
+		}
+	}
+}

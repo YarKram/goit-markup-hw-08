@@ -1,0 +1,10 @@
+/* page header */
+
+.header {
+	background-color: $accent-color-two;
+	border-bottom: 1px solid #ececec;
+	&__container {
+		@extend %container;
+		display: flex;
+	}
+}

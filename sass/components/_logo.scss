@@ -1,0 +1,20 @@
+/* logo */
+
+.logo {
+	font-weight: $font-weight-advantages;
+	color: $accent-color;
+	font-family: $additional-font;
+
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+}
+
+.logo__studio {
+	color: $main-text-color;
+	
+	&-inverse {
+		color: $accent-color-two;
+	}
+}

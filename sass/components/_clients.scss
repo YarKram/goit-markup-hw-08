@@ -1,0 +1,34 @@
+/*  Clients */
+
+.clients-list {
+	@extend %list;
+
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 30px;
+	columns: 6;
+}
+
+.clients-list__cell {
+	flex-basis: calc((100% - 30px * 5) / 6);
+}
+
+.clients-list__link {
+	@include flexPositioning();
+	height: 92px;
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+
+	color: #afb1b8;
+	transition: color 250ms $cubic-bezier;
+	&:hover {
+		color: #2196f3;
+		border: 1px solid #2196f3;
+	}
+}
+
+.clients-list__icon {
+	@extend %currentColor;
+}

@@ -1,0 +1,56 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+address {
+	font-style: normal;
+}
+
+/* body */
+
+body {
+	background-color: $accent-color-two;
+	color: $main-text-color;
+	font-family: $main-font;
+	text-decoration: none;
+}
+
+/* images */
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* container */
+
+.container {
+	@extend %marginAuto;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	width: 1200px;
+}
+
+section {
+	@extend %section;
+}
+
+.section__title {
+	font-size: 36px;
+	line-height: 1.17;
+	letter-spacing: 0.03em;
+
+	margin-top: 0;
+	margin-bottom: 50px;
+
+	text-align: center;
+}

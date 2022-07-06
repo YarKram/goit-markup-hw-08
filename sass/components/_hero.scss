@@ -1,0 +1,67 @@
+/* main  */
+/* hero */
+
+.hero {
+	@extend %marginAuto;
+	background-color: $accent-backgroung;
+
+	background-image: linear-gradient(
+			to right,
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url("../images/command.jpg");
+
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-size: cover;
+
+	max-width: 1600px;
+	align-items: center;
+
+	&__container {
+		@extend %container;
+		text-align: center;
+	}
+}
+
+.hero__heading {
+	@extend %marginAuto;
+	color: $accent-color-two;
+	font-weight: $main-font-weight;
+	font-size: 44px;
+	line-height: 1.36;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+
+	width: 696px;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+.button-background {
+	color: $accent-color-two;
+	background-color: $accent-color;
+	font-family: $main-font;
+	font-weight: $font-weight-advantages;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+
+	border: 0;
+	border-radius: 4px;
+	padding: 10px 32px;
+
+	cursor: pointer;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		color 250ms $cubic-bezier;
+
+	&:hover,
+	&:focus {
+		color: $accent-color-two;
+		background-color: $button-background-color-hover;
+	}
+}

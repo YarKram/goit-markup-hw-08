@@ -1,0 +1,38 @@
+/* overlay product card */
+
+.overlay {
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay__wrap {
+	@include flexPositioning();
+	content: "";
+	position: absolute;
+
+	padding-left: 24px;
+	padding-right: 24px;
+	margin: 0;
+
+	width: 100%;
+	height: 100%;
+	background: rgba(33, 150, 243, 0.9);
+	transform: translateY (0);
+	transition: transform 250ms $cubic-bezier;
+
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.03em;
+
+	color: #ffffff;
+
+	overflow: hidden;
+
+	.product-card__link:hover & {
+		transform: translateY(-100%);
+	}
+}
+
+.overlay__description {
+	margin: 0;
+}

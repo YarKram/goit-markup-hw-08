@@ -1,0 +1,27 @@
+// fonts + normalizer
+@import "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css";
+
+// common styles
+@import "./utils/_variables.scss";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+@import "./components/_constants.scss";
+@import "./components/_logo.scss";
+@import "./components/_header.scss";
+@import "./components/_navigation.scss";
+@import "./components/_header-contacts.scss";
+@import "./components/_footer.scss";
+@import "./components/_activities.scss";
+// main-page styles
+@import "./components/_hero.scss";
+@import "./components/_advantages.scss";
+@import "./components/_activities.scss";
+@import "./components/_team.scss";
+@import "./components/_social-icons.scss";
+@import "./components/_clients.scss";
+// portfolio styles
+@import "./components/_filter-buttons.scss";
+@import "./components/_product-card.scss";
+@import "./components/_overlay.scss";
+// modal window
+@import "./components/_modal-window.scss";
