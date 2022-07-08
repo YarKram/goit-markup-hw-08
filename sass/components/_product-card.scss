@@ -3,19 +3,25 @@
 .product-card {
 	@extend %list;
 
-	padding-left: 0;
+	padding: 0;
 
-	margin-top: calc(-1 * $cards-gap);
-	margin-left: calc(-1 * $cards-gap);
+	gap: 30px;
 
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .product-card__item {
-	flex-basis: calc(100% / 3 - 30px);
-	margin-left: $cards-gap;
-	margin-top: $cards-gap;
+	@include mobile {
+		flex-basis: 100%;
+	}
+	@include tablet {
+		flex-basis: calc((100% - 30px) / 2);
+	}
+	@include desktop {
+		flex-basis: calc((100% - 30px) / 3);
+	}
 }
 
 .product-card__link {
@@ -54,4 +60,5 @@
 	line-height: 1.88;
 	letter-spacing: 0.03em;
 	color: #757575;
+	margin: 0;
 }

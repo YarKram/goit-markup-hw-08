@@ -1,20 +1,24 @@
 /* Activities */
 
+.activities {
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+}
+
 .activities__grid {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: calc(-1 * $cards-gap);
-	margin-left: calc(-1 * $cards-gap);
+	justify-content: center;
+
 	padding: 0;
 	list-style: none;
+	gap: 30px;
 }
 
 .activities__cell {
 	margin: 0;
 	padding: 0;
-
-	margin-left: $cards-gap;
-	margin-top: $cards-gap;
 
 	flex-basis: calc(100% / 3 - 30px);
 	position: relative;

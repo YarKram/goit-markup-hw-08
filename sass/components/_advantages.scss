@@ -7,20 +7,32 @@
 	@extend %list;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 
-	margin-left: calc(-1 * $cards-gap);
-	margin-top: calc(-1 * $cards-gap);
+	gap: 30px;
 	padding-left: 0;
+
+	@include mobile {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 }
 
 .advantages__cell {
-	margin-right: 0;
-	margin-left: $cards-gap;
-	margin-top: $cards-gap;
-	margin-bottom: 0;
+	margin: 0;
 	padding: 0;
 
-	flex-basis: calc(100% / 4 - $cards-gap);
+	@include mobile {
+		flex-basis: 100%;
+	}
+
+	@include tablet {
+		flex-basis: calc((100% - 30px) / 2);
+	}
+
+	@include desktop {
+		flex-basis: calc((100% - 30px) / 2);
+	}
 }
 
 .advantages__wrap {

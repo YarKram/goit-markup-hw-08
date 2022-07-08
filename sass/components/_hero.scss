@@ -6,24 +6,80 @@
 	background-color: $accent-backgroung;
 
 	background-image: linear-gradient(
-			to right,
 			rgba(47, 48, 58, 0.4),
 			rgba(47, 48, 58, 0.4)
 		),
-		url("../images/command.jpg");
+		url(/images/bg-mob.jpg);
 
 	background-repeat: no-repeat;
 	background-position: center;
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 118;
+	padding-bottom: 118px;
 	background-size: cover;
 
-	max-width: 1600px;
+	// max-width: 1600px;
 	align-items: center;
 
 	&__container {
-		@extend %container;
 		text-align: center;
+	}
+}
+
+@include retina {
+	.hero {
+		background-image: linear-gradient(
+				rgba(25, 28, 38, 0.2),
+				rgba(25, 28, 38, 0.2)
+			),
+			url(/images/bg-mob-2x.jpg);
+	}
+}
+
+@include tablet {
+	.hero {
+		background-image: linear-gradient(
+				rgba(25, 28, 38, 0.2),
+				rgba(25, 28, 38, 0.2)
+			),
+			url(/images/bg-tab.jpg);
+	}
+}
+
+@include tablet {
+	@include retina {
+		.hero {
+			background-image: linear-gradient(
+					rgba(25, 28, 38, 0.2),
+					rgba(25, 28, 38, 0.2)
+				),
+				url(/images/bg-tab-2x.jpg);
+		}
+	}
+}
+
+@include desktop {
+	.hero {
+		background-image: linear-gradient(
+				rgba(25, 28, 38, 0.2),
+				rgba(25, 28, 38, 0.2)
+			),
+			url(/images/bg-desk.jpg);
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
+}
+
+@include desktop {
+	@include retina {
+		.hero {
+			background-image: linear-gradient(
+					rgba(25, 28, 38, 0.2),
+					rgba(25, 28, 38, 0.2)
+				),
+				url(/images/bg-desk-2x.jpg);
+			padding-top: 200px;
+			padding-bottom: 200px;
+		}
 	}
 }
 
@@ -31,14 +87,26 @@
 	@extend %marginAuto;
 	color: $accent-color-two;
 	font-weight: $main-font-weight;
-	font-size: 44px;
-	line-height: 1.36;
+	font-size: 26px;
+	line-height: calc(42 / 26);
+
+	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 
-	width: 696px;
 	margin-top: 0;
 	margin-bottom: 30px;
+
+	@include tablet {
+		width: 360px;
+	}
+
+	@include desktop {
+		font-size: 44px;
+		line-height: 1.36;
+
+		width: 696px;
+	}
 }
 
 .button-background {
