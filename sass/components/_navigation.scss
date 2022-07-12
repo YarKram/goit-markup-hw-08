@@ -28,6 +28,14 @@
 	background-color: transparent;
 	padding: 0;
 
+	&:hover,
+	&:focus {
+		color: #2196f3;
+		.icon-menu {
+			fill: currentColor;
+		}
+	}
+
 	@include tablet {
 		display: none;
 	}
@@ -69,12 +77,23 @@
 	overflow: auto;
 }
 
+.mob-menu__top {
+	padding-top: 10px;
+}
+
 .mob-menu__close {
 	display: block;
 	margin-left: auto;
 	border: 0;
 	background-color: rgba(0, 0, 0, 0);
 	padding: 0;
+	&:hover,
+	&:focus {
+		color: #2196f3;
+		.icon-cross {
+			fill: currentColor;
+		}
+	}
 }
 
 .mob-navigation__buttons {
@@ -91,8 +110,6 @@
 }
 
 .mob-navigation__link {
-	// font-family: "Roboto";
-	// font-style: normal;
 	font-weight: 500;
 	font-size: 40px;
 	line-height: calc(47 / 40);

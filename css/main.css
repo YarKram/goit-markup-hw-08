@@ -190,6 +190,12 @@ img {
   background-color: transparent;
   padding: 0;
 }
+.mob-menu__button:hover, .mob-menu__button:focus {
+  color: #2196f3;
+}
+.mob-menu__button:hover .icon-menu, .mob-menu__button:focus .icon-menu {
+  fill: currentColor;
+}
 @media screen and (min-width: 768px) {
   .mob-menu__button {
     display: none;
@@ -228,12 +234,22 @@ img {
   overflow: auto;
 }
 
+.mob-menu__top {
+  padding-top: 10px;
+}
+
 .mob-menu__close {
   display: block;
   margin-left: auto;
   border: 0;
   background-color: rgba(0, 0, 0, 0);
   padding: 0;
+}
+.mob-menu__close:hover, .mob-menu__close:focus {
+  color: #2196f3;
+}
+.mob-menu__close:hover .icon-cross, .mob-menu__close:focus .icon-cross {
+  fill: currentColor;
 }
 
 .mob-navigation__item:nth-child(2) {
