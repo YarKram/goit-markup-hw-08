@@ -21,20 +21,25 @@
 .modal {
 	position: absolute;
 
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-
-	width: 528px;
-	height: 581px;
-
 	padding: 40px;
-	width: 528px;
 
 	background: $accent-color-two;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
+
+	@include mobile {
+		width: 450px;
+		height: auto;
+		left: 50vw;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@include desktop {
+		width: 528px;
+		height: 581px;
+	}
 }
 
 .close-wrap {
@@ -70,9 +75,21 @@
 	margin-top: 0;
 	margin-bottom: 12px;
 	letter-spacing: 0.03em;
-	font-size: 20px;
-	line-height: 0.87;
+
 	text-align: center;
+
+	@include mobile {
+		font-size: 20px;
+		line-height: calc(30 / 20);
+	}
+
+	@include tablet {
+	}
+
+	@include desktop {
+		font-size: 20px;
+		line-height: calc(23 / 20);
+	}
 }
 
 .modal__item {
@@ -183,7 +200,7 @@
 .modal__label-checkbox {
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 24px;
+	line-height: calc(24 / 14);
 
 	letter-spacing: 0.03em;
 
@@ -192,6 +209,11 @@
 	align-items: center;
 	margin-bottom: 30px;
 	justify-content: center;
+
+	@include mobile {
+		font-size: 12px;
+		line-height: calc(14 / 12);
+	}
 }
 
 .modal__link {
@@ -207,5 +229,4 @@
 .button-background--centered {
 	@extend %marginAuto;
 	display: block;
-
 }

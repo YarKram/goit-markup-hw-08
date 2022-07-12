@@ -2,19 +2,44 @@
 
 .contact {
 	@extend %list;
-	display: flex;
-	margin-left: auto;
-	padding-left: 0;
-	margin-top: 0;
-	margin-bottom: 0px;
-	gap: 30px;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+
+	@include tablet {
+		display: flex;
+		margin-left: auto;
+		gap: 10px;
+		flex-direction: column;
+		padding: 21px 0;
+	}
+
+	@include desktop {
+		flex-direction: row;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 0px;
+		gap: 30px;
+	}
 }
 
 .contact__item {
-	padding-top: 32px;
-	padding-bottom: 32px;
-	display: inline-flex;
-	align-items: center;
+	// padding-top: 32px;
+	// padding-bottom: 32px;
+	// display: inline-flex;
+	// align-items: center;
+
+	@include tablet {
+		padding: 0;
+	}
+
+	@include desktop {
+		padding-top: 32px;
+		padding-bottom: 32px;
+		display: inline-flex;
+		align-items: center;
+	}
 }
 /* mail and phone links */
 

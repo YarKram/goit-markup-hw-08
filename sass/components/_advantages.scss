@@ -1,7 +1,4 @@
 /* advantages */
-.advantages__section {
-	padding-bottom: 0;
-}
 
 .advantages__grid {
 	@extend %list;
@@ -11,11 +8,6 @@
 
 	gap: 30px;
 	padding-left: 0;
-
-	@include mobile {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
 }
 
 .advantages__cell {
@@ -31,7 +23,7 @@
 	}
 
 	@include desktop {
-		flex-basis: calc((100% - 30px) / 2);
+		flex-basis: calc((100% - 30px * 3) / 4);
 	}
 }
 
@@ -54,6 +46,17 @@
 	line-height: 1.14;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+
+	@include mobile {
+		text-align: center;
+	}
+
+	@include tablet {
+		text-align: initial;
+	}
+	@include desktop {
+		text-align: initial;
+	}
 }
 
 .advantages__description {

@@ -10,12 +10,112 @@
 	</head>
 	<body>
 		<!-- Site header -->
-		<!-- <header class="header">
+		<header class="header">
 			<div class="container header__container">
 				<nav class="navigation">
 					<a href="./index.html" lang="en" class="logo">
 						Web<span class="logo__studio">Studio</span>
 					</a>
+
+					<button type="button" class="mob-menu__button" data-menu-open>
+						<svg width="40" height="40" aria-label="Mobile menu switcher">
+							<use
+								class="icon-menu"
+								href="/images/icons.svg#icon-menu_button"
+							></use>
+						</svg>
+					</button>
+
+					<div class="mob-menu is-hidden" data-menu>
+						<div class="mob-menu__container">
+							<div class="mob-menu__top">
+								<button type="button" class="mob-menu__close" data-menu-close>
+									<svg width="40" height="40" aria-label="Mobile menu switcher">
+										<use
+											class="icon-cross"
+											href="/images/icons.svg#icon-close_menu"
+										></use>
+									</svg>
+								</button>
+
+								<ul class="mob-navigation__buttons">
+									<li class="mob-navigation__item">
+										<a href="./index.html" class="mob-navigation__link">
+											Студия</a
+										>
+									</li>
+									<li class="mob-navigation__item">
+										<a
+											href="./portfolio.html"
+											class="mob-navigation__link mob-navigation__link--current"
+											>Портфолио</a
+										>
+									</li>
+									<li class="mob-navigation__item">
+										<a href="./index.html" class="mob-navigation__link"
+											>Контакты</a
+										>
+									</li>
+								</ul>
+							</div>
+							<div class="mob-menu__bottom">
+								<ul class="mob-contact">
+									<li class="mob-contact__item">
+										<a href="tel:+380961111111" class="mob-contact__link">
+											+38 096 111 11 11</a
+										>
+									</li>
+									<li class="mob-contact__item">
+										<a
+											href="mailto:info@devstudio.com"
+											class="mob-contact__link"
+										>
+											info@devstudio.com</a
+										>
+									</li>
+								</ul>
+								<ul class="mob-social">
+									<li class="mob-social__item">
+										<a
+											href=""
+											target="_blank"
+											rel="noopener norefferer nofollow"
+											class="mob-social__link"
+											>Instagram</a
+										>
+									</li>
+									<li class="mob-social__item">
+										<a
+											href=""
+											target="_blank"
+											rel="noopener norefferer nofollow"
+											class="mob-social__link"
+											>Twitter</a
+										>
+									</li>
+									<li class="mob-social__item">
+										<a
+											href=""
+											target="_blank"
+											rel="noopener norefferer nofollow"
+											class="mob-social__link"
+											>Facebook</a
+										>
+									</li>
+									<li class="mob-social__item">
+										<a
+											href=""
+											target="_blank"
+											rel="noopener norefferer nofollow"
+											class="mob-social__link"
+											>LinkedIn</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
 					<ul class="navigation__buttons">
 						<li class="navigation__item">
 							<a href="./index.html" class="navigation__link"> Студия</a>
@@ -51,7 +151,7 @@
 					</li>
 				</ul>
 			</div>
-		</header> -->
+		</header>
 		<!-- Main content -->
 		<main>
 			<section>
@@ -60,7 +160,12 @@
 				<div class="container">
 					<ul class="filter">
 						<li class="filter__item">
-							<button type="button" class="filter__button filter__button--current">Все</button>
+							<button
+								type="button"
+								class="filter__button filter__button--current"
+							>
+								Все
+							</button>
 						</li>
 						<li class="filter__item">
 							<button type="button" class="filter__button">Веб-сайты</button>
@@ -81,12 +186,36 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_1.jpg"
-										alt="Ноутбук со страницей сайта"
-										width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-1/prod-1-desk.jpg    1x,
+												./images/products/prod-1/prod-1-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-1/prod-1-tab.jpg    1x,
+												./images/products/prod-1/prod-1-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-1/prod-1.jpg    1x,
+												./images/products/prod-1/prod-1-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<img
+											src="./images/products/prod-1/prod-1.jpg"
+											alt="Ноутбук со страницей сайта"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
+
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -105,12 +234,37 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_2.jpg"
-										alt="Два баскетболиста с мячом"
-									width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-2/prod-2-desk.jpg    1x,
+												./images/products/prod-2/prod-2-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-2/prod-2-tab.jpg    1x,
+												./images/products/prod-2/prod-2-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-2/prod-2.jpg    1x,
+												./images/products/prod-2/prod-2-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-2/prod-2.jpg"
+											alt="Два баскетболиста с мячом"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
+
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -131,12 +285,37 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_3.jpg"
-										alt="Логотип ресторана морской еды"
-									width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-3/prod-3-desk.jpg    1x,
+												./images/products/prod-3/prod-3-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-3/prod-3-tab.jpg    1x,
+												./images/products/prod-3/prod-3-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-3/prod-3.jpg    1x,
+												./images/products/prod-3/prod-3-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-3/prod-3.jpg"
+											alt="Логотип ресторана морской еды"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
+
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -155,12 +334,36 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_4.jpg"
-										alt="Наушники"
-									width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-4/prod-4-desk.jpg    1x,
+												./images/products/prod-4/prod-4-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-4/prod-4-tab.jpg    1x,
+												./images/products/prod-4/prod-4-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-4/prod-4.jpg    1x,
+												./images/products/prod-4/prod-4-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-4/prod-4.jpg"
+											alt="Наушники"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -179,12 +382,37 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_5.jpg"
-										alt="Фото двух коробок"
-								width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-5/prod-5-desk.jpg    1x,
+												./images/products/prod-5/prod-5-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-5/prod-5-tab.jpg    1x,
+												./images/products/prod-5/prod-5-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-5/prod-5.jpg    1x,
+												./images/products/prod-5/prod-5-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-5/prod-5.jpg"
+											alt="Фото двух коробок"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
+
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -203,12 +431,36 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_6.jpg"
-										alt="Монитор с веб-страницей"
-									width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-6/prod-6-desk.jpg    1x,
+												./images/products/prod-6/prod-6-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-6/prod-6-tab.jpg    1x,
+												./images/products/prod-6/prod-6-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-6/prod-6.jpg    1x,
+												./images/products/prod-6/prod-6-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-6/prod-6.jpg"
+											alt="Монитор с веб-страницей"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -227,12 +479,37 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_7.jpg"
-										alt="Разворот книги"
-									width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-7/prod-7-desk.jpg    1x,
+												./images/products/prod-7/prod-7-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-7/prod-7-tab.jpg    1x,
+												./images/products/prod-7/prod-7-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-7/prod-7.jpg    1x,
+												./images/products/prod-7/prod-7-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-7/prod-7.jpg"
+											alt="Разворот книги"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
+
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -251,12 +528,37 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_8.jpg"
-										alt="Бирка с надписью"
-								width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-8/prod-8-desk.jpg    1x,
+												./images/products/prod-8/prod-8-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-8/prod-8-tab.jpg    1x,
+												./images/products/prod-8/prod-8-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-8/prod-8.jpg    1x,
+												./images/products/prod-8/prod-8-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-8/prod-8.jpg"
+											alt="Бирка с надписью"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
+
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -275,12 +577,36 @@
 						<li class="product-card__item">
 							<a href="" class="product-card__link">
 								<div class="overlay">
-									<img
-										src="./images/portfolio/img_9.jpg"
-										alt="Руки печатают на ноутбуке"
-							width="100%"
-										height="auto"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/products/prod-9/prod-9-desk.jpg    1x,
+												./images/products/prod-9/prod-9-desk-2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-9/prod-9-tab.jpg    1x,
+												./images/products/prod-9/prod-9-tab-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="
+												./images/products/prod-9/prod-9.jpg    1x,
+												./images/products/prod-9/prod-9-2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+										/>
+
+										<img
+											src="./images/products/prod-9/prod-9.jpg"
+											alt="Руки печатают на ноутбуке"
+											width="100%"
+											height="auto"
+										/>
+									</picture>
 									<div class="overlay__wrap">
 										<p class="overlay__description">
 											Ресурс предлагает комплексные предложения с разным уровнем
@@ -301,7 +627,7 @@
 			</section>
 		</main>
 		<!-- Footer, address -->
-		<!-- <footer class="footer">
+		<footer class="footer">
 			<div class="container footer__container">
 				<div class="footer__left-info">
 					<a href="./index.html" lang="en" class="logo footer__logo">
@@ -377,11 +703,11 @@
 							</a>
 						</li>
 					</ul>
-				</div> -->
+				</div>
 
 				<!-- Subscription button footer -->
 
-				<!-- <div class="footer__subscription">
+				<div class="footer__subscription">
 					<form>
 						<h3 class="footer__invitation">Подпишитесь на рассылку</h3>
 						<div class="footer__form">
@@ -403,9 +729,10 @@
 								</svg>
 							</button>
 						</div>
-					</form> -->
-				<!-- </div>
+					</form>
+				</div>
 			</div>
-		</footer> -->
+		</footer>
+		<script src="./js/menu.js"></script>
 	</body>
 </html>

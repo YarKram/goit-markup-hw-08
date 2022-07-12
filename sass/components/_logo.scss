@@ -9,11 +9,16 @@
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	text-decoration: none;
+
+	@include mobile {
+		font-size: 24px;
+		line-height: calc(28 / 24);
+	}
 }
 
 .logo__studio {
 	color: $main-text-color;
-	
+
 	&-inverse {
 		color: $accent-color-two;
 	}

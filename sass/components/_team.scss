@@ -33,7 +33,7 @@
 	}
 
 	@include desktop {
-		flex-basis: calc((100% - 30px) / 4);
+		flex-basis: calc((100% - 30px * 3) / 4);
 	}
 }
 

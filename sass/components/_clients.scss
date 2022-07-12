@@ -7,8 +7,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-right: -30px;
-	margin-left: -30px;
 
 	gap: 30px;
 }
@@ -17,11 +15,11 @@
 	flex-basis: calc((100% - 30px) / 2);
 
 	@include tablet {
-		flex-basis: calc((100% - 30px) / 3);
+		flex-basis: calc((100% - 30px * 2) / 3);
 	}
 
 	@include desktop {
-		flex-basis: calc((100% - 30px) / 6);
+		flex-basis: calc((100% - 30px * 5) / 6);
 	}
 }
 
