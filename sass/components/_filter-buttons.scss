@@ -3,7 +3,7 @@
 
 .filter {
 	@extend %list;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	padding-left: 0;
 	display: flex;
 	justify-content: flex-start;
@@ -12,6 +12,11 @@
 
 	@include tablet {
 		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	@include desktop {
+		margin-bottom: 50px;
 	}
 }
 

@@ -7,6 +7,8 @@
 	@media screen and (max-width: 767px) {
 		width: 100%;
 		justify-content: space-between;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 }
 
@@ -34,9 +36,9 @@
 // mobile menu container
 
 .is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
 }
 
 .mob-menu {
@@ -48,7 +50,7 @@
 	left: 0;
 	background-color: #ffffff;
 	z-index: 3;
-		transition: opacity 250ms $cubic-bezier;
+	transition: opacity 250ms $cubic-bezier;
 }
 
 .mob-menu__container {
