@@ -226,6 +226,7 @@ img {
   flex-direction: column;
   height: 100%;
   max-width: 480px;
+  padding-top: 10px;
   padding-left: 40px;
   padding-right: 15px;
   padding-bottom: 48px;
@@ -234,13 +235,10 @@ img {
   overflow: auto;
 }
 
-.mob-menu__top {
-  padding-top: 10px;
-}
-
 .mob-menu__close {
   display: block;
   margin-left: auto;
+  margin-bottom: -10px;
   border: 0;
   background-color: rgba(0, 0, 0, 0);
   padding: 0;
@@ -299,6 +297,7 @@ img {
   flex-wrap: wrap;
   gap: 20px;
   list-style: none;
+  padding-bottom: 10px;
 }
 
 .mob-social__item:not(:last-child):after {
