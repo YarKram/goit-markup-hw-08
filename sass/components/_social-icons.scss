@@ -28,7 +28,8 @@
 	color: rgb(175, 177, 184);
 	background-color: transparent;
 
-	transition: background-color 250ms $cubic-bezier;
+	transition: background-color 250ms $cubic-bezier,
+		color 250ms $cubic-bezier;
 
 	&:hover {
 		background-color: $accent-color;
