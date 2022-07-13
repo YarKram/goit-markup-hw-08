@@ -624,6 +624,7 @@ img {
 @media screen and (max-width: 1199px) {
   .activities {
     display: none;
+    padding-top: 0;
   }
 }
 
@@ -822,6 +823,7 @@ img {
 @media screen and (max-width: 1199px) {
   .activities {
     display: none;
+    padding-top: 0;
   }
 }
 
@@ -1310,10 +1312,6 @@ img {
 }
 .modal__input-checkbox:focus + .modal__icon-checkbox {
   border: 2px solid #2196f3;
-}
-
-.modal__consent {
-  text-align: center;
 }
 
 .modal__item-textarea {

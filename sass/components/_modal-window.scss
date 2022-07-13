@@ -170,8 +170,6 @@
 .modal__input-checkbox {
 	position: absolute;
 	appearance: none;
-	// width: 15px;
-	// display: flex;
 }
 
 .modal__icon-checkbox {
@@ -195,10 +193,6 @@
 	.modal__input-checkbox:focus + & {
 		border: 2px solid $accent-color;
 	}
-}
-
-.modal__consent {
-	text-align: center;
 }
 
 .modal__item-textarea {
