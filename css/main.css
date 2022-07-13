@@ -624,6 +624,10 @@ img {
 @media screen and (max-width: 1199px) {
   .activities {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .activities {
     padding-top: 0;
   }
 }
@@ -823,6 +827,10 @@ img {
 @media screen and (max-width: 1199px) {
   .activities {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .activities {
     padding-top: 0;
   }
 }
